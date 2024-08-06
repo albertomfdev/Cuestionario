@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PRUEBA BOTONES</title>
+</head>
+<body>		
+				<div class="formularios">
+					
+			<button type="submit" class="formulario_btn" id="uno">Dos</button>
+			<button type="submit" class="formulario_btn" id="dos">uno</button>
+
+				</div>
+
+			<script>
+				const b1 = document.getElementById('formularios');
+				const boton = document.queryselectorAll('#formularios button');
+
+
+				function elemento(e){
+				  if (e.srcElement)
+					  tag = e.srcElement.tagName;
+				  else if (e.target)
+				  	  tag = e.target.tagName;
+				  
+				  alert("El elemento selecionado ha sido " + tag);
+				}
+
+						boton.forEach( (input) =>
+						 {
+							input.addEventListener('click',elemento);
+							input.addEventListener('blur',elemento);
+					   	});
+
+				// FUNCION ESCUCHA DE FORMULARIO NUMERO 1 
+					b1.addEventListener('submit',(e)=>{
+						e.preventDefault();
+						
+						
+					});
+
+			</script>
+</body>
+</html>
